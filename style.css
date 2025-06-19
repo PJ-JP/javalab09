@@ -1,0 +1,122 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+#pecera-container {
+    display: grid;
+    border: 5px solid #0056b3;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: #add8e6;
+    padding: 5px;
+    gap: 2px;
+    transition: background-color 1s linear;
+    position: relative;
+    overflow: hidden;
+}
+
+.pecera-celda {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.fish-area {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#nemo-area {
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+#dory-area {
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.fish-img {
+    width: 100px;
+    height: auto;
+    user-select: none;
+}
+
+.counter-bubble {
+    position: absolute;
+    top: -15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 11;
+}
+
+#clean-pecera-btn {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.2s;
+}
+
+#clean-pecera-btn:hover {
+    background-color: #c82333;
+}
+
+.bubble {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    opacity: 0.8;
+    cursor: grab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.1s ease-out, top 5s linear; /* Añado 'top 5s linear' */
+    z-index: 5;
+}
+
+.bubble-nemo {
+    background-color: #ff8c00;
+}
+
+.bubble-dory {
+    background-color: #007bff;
+}
+
+.bubble:active {
+    cursor: grabbing;
+}
+
+.fish-area.drag-over {
+    box-shadow: 0 0 15px 5px #00ff00;
+}
